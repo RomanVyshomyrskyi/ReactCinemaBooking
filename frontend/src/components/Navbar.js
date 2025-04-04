@@ -1,9 +1,7 @@
-// ==== Темна навігаційна панель у стилі проєкту (без іконок, прикріплена зверху) ====
 import React, { useEffect } from "react";
 
 const Navbar = ({ setPage, logout, role }) => {
   useEffect(() => {
-    // Додаємо відступ зверху для основного контейнера, щоб не перекривало навбар
     const body = document.body;
     body.style.paddingTop = "5rem";
     return () => {

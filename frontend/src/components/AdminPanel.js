@@ -31,7 +31,7 @@ const AdminPanel = ({ token }) => {
     e.preventDefault();
     const res = await createSession(token, {
       ...sessionForm,
-      seats: Array.from({ length: 20 }, () => Array(20).fill(false)),
+      seats: Array.from({ length: 10 }, () => Array(10).fill(false)),
     });
     if (res.ok) {
       alert("Session created");
@@ -104,7 +104,7 @@ const AdminPanel = ({ token }) => {
         <select
           name="movie"
           className="form-control mb-2"
-          value={sessionForm.movie} 
+          value={sessionForm.movie}
           onChange={handleSessionChange}
           style={{ backgroundColor: "#09122C", color: "#E17564", borderColor: "#d7263d" }}
         >
